@@ -6,6 +6,22 @@ My strongest area is **agentic AI architecture and AI-assisted systems delivery*
 
 I use AI coding systems transparently as an engineering force multiplier. I do not present myself as a traditional senior software engineer who manually authored every line of these systems. I own the architecture, requirements, orchestration, testing, acceptance criteria, product direction, and operational outcomes.
 
+## AI-Native Business Model
+
+Entreprenuity is deliberately being built as an **AI-native company** rather than a conventional company that occasionally uses AI tools.
+
+My estimate is that roughly **90% of the current software/product build has been produced through AI-assisted engineering workflows**. That does not mean pressing one button and accepting whatever comes back. The operating model is closer to running an AI engineering team:
+
+- I define the commercial problem and desired outcome.
+- Requirements and acceptance criteria are made explicit.
+- Specialist AI/coding agents are assigned implementation or review work.
+- GitHub is used as a durable source of code, changes, tasks, and evidence.
+- Outputs are reviewed against the actual requested behaviour.
+- Failed or incomplete work is routed back for correction.
+- Human approval remains the final production gate for sensitive changes.
+
+The aim is to prove that a small business can use agentic AI as an operational workforce while retaining governance and accountability.
+
 ## Current Focus
 
 - Agentic workflows and multi-agent orchestration
@@ -42,6 +58,10 @@ See: [Entreprenuity AI systems case study](case-studies/05-entreprenuity-ai-syst
 
 ### Digital Ambush
 A reusable personalised-prospect workflow that combines evidence-backed business research, generated concept pages, AI-guided explanation, engagement telemetry, revision requests, and prospect-specific AI context.
+
+The workflow is designed so AI can move from **research → analysis → concept → page assembly → AI prospect guidance → revision request → human acceptance**, rather than ending at a generated answer.
+
+On 26 August 2026 the canonical workflow was expanded with prospect research grounding, a reusable psychology layer, mobile interaction fixes, prospect-aware Kerry routing, engagement telemetry, conversation-context handling, revision-request capture, and a repeatable operating playbook. The code changes are recorded in GitHub. Fresh hosted verification was still pending at the end of that build session because the deployment provider rate-limited further builds, so the portfolio does not claim the new version was live before it was verified.
 
 This project is designed around a strict rule: proposed outcomes are labelled as proposed, and unverified performance or revenue claims are not presented as fact.
 
