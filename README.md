@@ -32,6 +32,7 @@ The aim is to prove that a small business can use agentic AI as an operational w
 - Persistent context, handoffs, and operational memory
 - Customer-facing AI assistants and lead workflows
 - Serverless web applications and business automation
+- AI-assisted video, UGC, and content-production workflows
 - Evidence-first delivery, audit trails, and fail-closed patterns
 
 ## Selected Systems
@@ -65,6 +66,19 @@ On 26 August 2026 the canonical workflow was expanded with prospect research gro
 
 This project is designed around a strict rule: proposed outcomes are labelled as proposed, and unverified performance or revenue claims are not presented as fact.
 
+### AI Content Engine / UGC Factory — Active Roadmap
+The next major Entreprenuity build direction is an AI-assisted content-production system for commercial video and UGC workflows.
+
+The intended operating chain is:
+
+**research → content strategy → ideation → scripting → AI video/UGC generation → variants → quality review → campaign-ready output**
+
+The initial commercial model is a managed content service, with AI doing much of the research, ideation, scripting, generation, variation, and QA work while a human operator remains responsible for final quality and client delivery. The longer-term product direction is to evolve the workflow into a customer portal, self-service creator product, and potentially a white-label agency system.
+
+This is listed as an active roadmap rather than a finished production system. The significance is the same pattern used across the rest of the portfolio: take a labour-heavy business workflow and redesign it around agents, AI generation, repeatable stages, human quality gates, and measurable outputs.
+
+See: [AI Content Engine / UGC Factory roadmap](case-studies/07-ai-content-engine.md)
+
 ### ASIOD / Receipt-First Governance
 A governance pattern for AI-assisted builds where important work is not considered complete simply because an agent says it is complete. Tasks move through explicit evidence, receipt, gate, and blocked/pass states.
 
@@ -97,6 +111,7 @@ Hands-on working exposure through these AI-assisted builds includes:
 - PM2 and local Windows service/process workflows
 - Supabase/Postgres architecture and data-model work
 - LLM API integration and model-provider routing
+- AI image/video/content generation workflow design
 - Analytics and conversion tracking, including GA4 and Meta Pixel
 
 More detail: [skills/README.md](skills/README.md)
