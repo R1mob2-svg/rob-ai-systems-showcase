@@ -1,29 +1,31 @@
-# Case Study: Antigravity Telegram Bridge
+# Case Study: Mobile Command Bridge
 
-## What It Does
+## Problem
 
-The Antigravity Telegram Bridge allows Rob to send commands from his phone and route them into an AI-assisted operating workflow.
+A founder cannot spend every working hour sitting at a development machine. The command bridge explored how phone-originated instructions could be routed into an AI-assisted operating workflow while still leaving durable task and status evidence.
 
-The goal is mobile command control: Rob can be away from his desk and still send structured instructions into the system.
+## Approach
 
-## Built Solo With AI Assistance
+The work connected mobile messaging concepts with agent routing, GitHub-backed records, local/cloud workers, and receipt-style completion tracking.
 
-This system was built by Rob using AI-assisted development. The work included architecture planning, command routing design, receipt thinking, and debugging across multiple services and local/cloud components.
+Key design areas included:
 
-## Production Status
+- Mobile command input
+- Structured agent routing
+- GitHub task and change records
+- Local/cloud worker coordination
+- Status and receipt loops
+- Human approval boundaries
+- Debugging across multiple services
 
-The bridge is used as part of Rob’s live working setup today. Public details are limited to protect private infrastructure and credentials.
+## Role
+
+I designed the workflow and acceptance behaviour, directed AI-assisted implementation, tested the end-to-end operating pattern, and iterated the architecture around real usage constraints.
 
 ## Why It Matters
 
-This shows practical ability to connect:
+This project helped shape the broader NEO/OpenClaw operating model: AI systems become substantially more useful when a human can issue structured commands remotely without losing auditability or control.
 
-- Telegram command input
-- AI-assisted routing
-- GitHub records
-- Local or cloud worker concepts
-- Human approval and receipt loops
+## Public-Safe Scope
 
-## Source Code
-
-No source code is included in this public case study.
+The portfolio intentionally omits credentials, private endpoints, internal host details, and other infrastructure information that would be inappropriate to publish in a recruiter-facing repository.
