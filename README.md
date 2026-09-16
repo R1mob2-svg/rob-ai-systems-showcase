@@ -159,6 +159,14 @@ More detail: [skills/README.md](skills/README.md)
 
 GeminX is intended to become a **white-label AI workforce / autonomous business operating layer** for SMEs and specialist verticals. The commercial thesis is outcome-based: customers should not need to care which model performed a task. GeminX should select the least expensive capable execution path while preserving reliability, permissions and evidence.
 
+## For Investors
+
+GeminX is now beginning targeted pre-seed/seed conversations. The public investor brief brings together the core runtime, Roblox Game Creator, Entreprenuity commercial ecosystem, cost-routing thesis, current evidence-bound status, roadmap and indicative use of funds.
+
+**Read: [GeminX Investor Brief](INVESTOR_BRIEF.md)**
+
+The current fundraising direction being explored is approximately **£500k–£1m**, sized around founder full-time transition, production sealing, commercial pilots, engineering/infrastructure and go-to-market. No investment is represented as committed, and unverified revenue/customer claims are intentionally excluded.
+
 ## Evidence & Source Availability
 
 The active GeminX implementation repositories are private because they contain commercial systems and credentials-sensitive architecture. This public repository is a curated, public-safe technical and commercial showcase. Exact code, production receipts, architecture evidence and private-repository history can be demonstrated during an authorised technical review.
