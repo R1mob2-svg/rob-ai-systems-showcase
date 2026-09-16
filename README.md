@@ -1,132 +1,172 @@
-# Robert Wigley — Agentic AI Systems & Business Automation Portfolio
+# Robert Wigley — Agentic AI Systems & Autonomous Business Infrastructure
 
-I am a founder and business operator who moved into applied AI by building systems around real operational problems rather than following a traditional computer-science career path.
+I am a founder and business operator building applied AI systems around real operational problems. My focus is not a single chatbot or model. It is the **runtime around the models**: objective orchestration, model routing, tools, browser/system execution, persistent context, specialist workers, verification, self-repair and commercial workflows.
 
-My strongest area is **agentic AI architecture and AI-assisted systems delivery**: defining the problem, designing the workflow, directing coding agents, connecting services, testing behaviour, reviewing evidence, deploying changes, and turning a loose collection of AI tools into a controlled operating system.
+I use AI coding systems transparently as an engineering force multiplier. I do not present myself as a traditional senior software engineer who manually authored every line. I own the product direction, architecture, acceptance criteria, orchestration, testing, evidence review and commercial outcomes.
 
-I use AI coding systems transparently as an engineering force multiplier. I do not present myself as a traditional senior software engineer who manually authored every line of these systems. I own the architecture, requirements, orchestration, testing, acceptance criteria, product direction, and operational outcomes.
+> **Current flagship: GeminX** — a provider-neutral autonomous business operating layer designed to route work to the cheapest capable model or specialist worker, execute across software and web systems, preserve organisational context, repair failures and return evidence-backed results.
 
-## AI-Native Business Model
+## Flagship Systems
 
-Entreprenuity is deliberately being built as an **AI-native company** rather than a conventional company that occasionally uses AI tools.
+### GeminX — Autonomous Business Operating Layer
 
-My estimate is that roughly **90% of the current software/product build has been produced through AI-assisted engineering workflows**. That does not mean pressing one button and accepting whatever comes back. The operating model is closer to running an AI engineering team:
+GeminX has evolved from a governed software-delivery control plane into a broader autonomous execution platform.
 
-- I define the commercial problem and desired outcome.
-- Requirements and acceptance criteria are made explicit.
-- Specialist AI/coding agents are assigned implementation or review work.
-- GitHub is used as a durable source of code, changes, tasks, and evidence.
-- Outputs are reviewed against the actual requested behaviour.
-- Failed or incomplete work is routed back for correction.
-- Human approval remains the final production gate for sensitive changes.
+Current production architecture includes or is actively integrating:
 
-The aim is to prove that a small business can use agentic AI as an operational workforce while retaining governance and accountability.
+- cost-aware model routing across routine, reasoning and frontier tiers;
+- persistent Agent Brain/context retrieval;
+- ToolRegistry and MCP-based capability integration;
+- browser and system operator surfaces;
+- multi-step tool execution;
+- specialist worker routing;
+- durable task/event/receipt infrastructure;
+- self-heal and same-probe verification loops;
+- explicit audit and acceptance boundaries;
+- a white-label HQ direction for business deployments;
+- a V8 roadmap covering plugin discovery, governed sub-agents, OpenClaw skill import, social-provider integration, frontier-to-cheap-worker delegation and realtime voice.
 
-## Current Focus
+The design principle is simple: **use the cheapest capable intelligence for execution and reserve expensive frontier models for genuinely hard architecture, ambiguity and verification.**
 
-- Agentic workflows and multi-agent orchestration
-- LLM/API integration and model routing
-- MCP-based tool and command integration
-- GitHub-backed task, command, and receipt flows
-- Human-in-the-loop approvals and governance
-- Persistent context, handoffs, and operational memory
-- Customer-facing AI assistants and lead workflows
-- Serverless web applications and business automation
-- AI-assisted video, UGC, and content-production workflows
-- Evidence-first delivery, audit trails, and fail-closed patterns
+See: [GeminX platform case study](case-studies/04-geminx-v2.md)
 
-## Selected Systems
+### GeminX Roblox Game Creator
 
-### GeminX V2
-A TypeScript/Node control-plane project for governed AI-assisted software delivery. The architecture includes projects, runs, events, receipts, audit boundaries, snapshots, kill-switch concepts, route contracts, testing, and explicit proof states.
+A specialist vertical built on the same runtime. A founder or child describes a game idea in ordinary language, while GeminX coordinates specification, generation, build artifacts, repair, validation, compliance, publication identity and library state.
 
-See: [GeminX V2 case study](case-studies/04-geminx-v2.md)
+The long-term product objective is not “AI writes some Lua.” It is:
+
+**idea → authored game plan → generated project → build → repair → Roblox validation → compliance → exact publish target → playability proof → reusable game library**
+
+Live product surface: **https://geminx-creator.vercel.app/roblox-builder**
+
+Current public status is deliberately evidence-bound: substantial Creator architecture and production workflows are implemented, while the final founder-ready end-to-end acceptance seal remains in active validation. The portfolio does not claim one-click playable completion until the exact published Roblox identity passes the final playability/compliance checks.
+
+See: [GeminX Roblox Game Creator case study](case-studies/08-geminx-roblox-game-creator.md)
 
 ### NEO / OpenClaw Operating Layer
-An AI operating scaffold for coordinating agents, memory, commands, approvals, handoffs, and business workflows across local and cloud components.
+
+An earlier AI operating scaffold for coordinating agents, memory, commands, approvals, handoffs and business workflows across local and cloud components. Lessons from this system directly informed GeminX governance, capability boundaries and the rule that agent status messages are not proof of execution.
 
 See: [NEO architecture](case-studies/02-neo-architecture.md)
 
 ### OpenClaw MCP Bridge
-A practical MCP integration project covering command routing, SSE transport, GitHub App authentication, token authentication, health checks, and controlled tool access.
+
+A practical MCP integration project covering command routing, SSE transport, GitHub App authentication, token authentication, health checks and controlled tool access.
 
 See: [OpenClaw MCP case study](case-studies/06-openclaw-mcp.md)
 
 ### Entreprenuity Smart Website + Kerry
-A commercial smart-website system combining a React/Vite frontend, serverless API routes, AI concierge behaviour, prospect-aware context, lead/revision workflows, deployment pipelines, analytics, and AI-assisted customer journeys.
+
+A commercial smart-website system combining a React/Vite frontend, serverless API routes, AI concierge behaviour, prospect-aware context, lead/revision workflows, deployment pipelines, analytics and AI-assisted customer journeys.
 
 See: [Entreprenuity AI systems case study](case-studies/05-entreprenuity-ai-systems.md)
 
 ### Digital Ambush
-A reusable personalised-prospect workflow that combines evidence-backed business research, generated concept pages, AI-guided explanation, engagement telemetry, revision requests, and prospect-specific AI context.
 
-The workflow is designed so AI can move from **research → analysis → concept → page assembly → AI prospect guidance → revision request → human acceptance**, rather than ending at a generated answer.
+A personalised prospecting workflow combining evidence-backed business research, generated concept pages, AI-guided explanation, engagement telemetry, revision requests and prospect-specific AI context.
 
-On 26 August 2026 the canonical workflow was expanded with prospect research grounding, a reusable psychology layer, mobile interaction fixes, prospect-aware Kerry routing, engagement telemetry, conversation-context handling, revision-request capture, and a repeatable operating playbook. The code changes are recorded in GitHub. Fresh hosted verification was still pending at the end of that build session because the deployment provider rate-limited further builds, so the portfolio does not claim the new version was live before it was verified.
+The workflow is designed so AI can move through:
 
-This project is designed around a strict rule: proposed outcomes are labelled as proposed, and unverified performance or revenue claims are not presented as fact.
+**research → analysis → concept → page assembly → prospect guidance → revision request → human acceptance**
+
+Performance/revenue claims are never treated as proven until the underlying commercial evidence exists.
 
 ### AI Content Engine / UGC Factory — Active Roadmap
-The next major Entreprenuity build direction is an AI-assisted content-production system for commercial video and UGC workflows.
 
-The intended operating chain is:
+A commercial content-production direction covering:
 
 **research → content strategy → ideation → scripting → AI video/UGC generation → variants → quality review → campaign-ready output**
-
-The initial commercial model is a managed content service, with AI doing much of the research, ideation, scripting, generation, variation, and QA work while a human operator remains responsible for final quality and client delivery. The longer-term product direction is to evolve the workflow into a customer portal, self-service creator product, and potentially a white-label agency system.
-
-This is listed as an active roadmap rather than a finished production system. The significance is the same pattern used across the rest of the portfolio: take a labour-heavy business workflow and redesign it around agents, AI generation, repeatable stages, human quality gates, and measurable outputs.
 
 See: [AI Content Engine / UGC Factory roadmap](case-studies/07-ai-content-engine.md)
 
 ### ASIOD / Receipt-First Governance
-A governance pattern for AI-assisted builds where important work is not considered complete simply because an agent says it is complete. Tasks move through explicit evidence, receipt, gate, and blocked/pass states.
+
+A governance pattern where important AI work is not complete because an agent says “done.” Tasks progress through explicit evidence, receipts, gates and blocked/pass states.
 
 See: [ASIOD Vault](case-studies/01-asiod-vault.md)
 
+## Why GeminX Is Different
+
+GeminX is being designed around the harness rather than loyalty to one foundation model.
+
+```text
+Business objective
+      ↓
+GeminX objective runtime
+      ↓
+Brain + capability discovery + permissions
+      ↓
+Cheapest-capable model / specialist worker
+      ↓
+API / MCP / browser / system / repo execution
+      ↓
+Mechanical evidence + receipts
+      ↓
+Repair if needed → rerun same probe
+      ↓
+Verified result + reusable learning
+```
+
+This allows the platform to use low-cost models and deterministic tools for routine work while escalating only genuinely difficult tasks to expensive frontier intelligence.
+
+## Current Engineering Themes — September 2026
+
+- Provider-neutral model routing and frontier escalation
+- Specialist sub-agent and worker orchestration
+- Tool/plugin discovery and permission envelopes
+- Browser and computer-use execution
+- Persistent organisational context and procedural learning
+- Durable continuation across long-running objectives
+- Self-heal, replay and evidence-first acceptance
+- White-label AI workforce interfaces
+- Realtime conversational front doors backed by cheaper execution workers
+- Vertical agent products such as the Roblox Game Creator
+- Cost, latency and verified-completion telemetry
+
 ## Working Method
 
-Typical delivery flow:
-
-1. Translate a business problem into a system and acceptance criteria.
-2. Design the architecture, boundaries, permissions, and proof requirements.
-3. Delegate implementation work to AI coding agents and specialist models.
-4. Review code, commits, receipts, logs, and runtime behaviour.
-5. Test integrations and user journeys rather than trusting completion claims.
-6. Iterate until evidence matches the requested outcome.
-7. Deploy, monitor, and keep rollback/governance boundaries in place.
+1. Translate a business problem into an explicit objective and acceptance criteria.
+2. Resolve the current production identity and evidence before changing anything.
+3. Select the cheapest capable model, agent or deterministic tool.
+4. Execute through bounded permissions and owned resources.
+5. Capture receipts, logs, commits, runtime evidence and exact target identity.
+6. If a repairable failure appears, repair it and rerun the same probe.
+7. Do not promote “merged”, “deployed” or “agent says done” into “live proven” without corresponding evidence.
+8. Promote repeated successful workflows into reusable skills.
 
 ## Technical Exposure
 
-Hands-on working exposure through these AI-assisted builds includes:
+Hands-on working exposure through these AI-assisted systems includes:
 
-- TypeScript and JavaScript
-- Node.js and Express
-- React and Vite
-- REST and serverless API design
-- Git, GitHub, pull requests, issues, and commit-driven workflows
-- Vercel deployment workflows
-- MCP and SSE integration patterns
-- GitHub App and token-based authentication patterns
-- PM2 and local Windows service/process workflows
-- Supabase/Postgres architecture and data-model work
-- LLM API integration and model-provider routing
-- AI image/video/content generation workflow design
-- Analytics and conversion tracking, including GA4 and Meta Pixel
+- TypeScript / JavaScript
+- Node.js / Express
+- React / Vite
+- REST and serverless APIs
+- Git / GitHub / pull requests / CI workflows
+- Railway and Vercel deployment
+- Supabase / Postgres
+- MCP and external tool integration
+- Browser/system automation
+- LLM APIs and model-provider routing
+- Persistent context / retrieval / event / receipt systems
+- AI image, video and content workflows
+- Analytics and conversion tracking
 
 More detail: [skills/README.md](skills/README.md)
 
-## Commercial Background
+## Commercial Direction
 
-Before moving heavily into AI systems, I spent years running operational businesses and personally handled sales, lead generation, paid acquisition, website maintenance, and commercial decision-making. That background is why most of my AI work is designed around measurable business workflows rather than technology for its own sake.
+GeminX is intended to become a **white-label AI workforce / autonomous business operating layer** for SMEs and specialist verticals. The commercial thesis is outcome-based: customers should not need to care which model performed a task. GeminX should select the least expensive capable execution path while preserving reliability, permissions and evidence.
 
-## Recruiter / Technical Review Note
+## Evidence & Source Availability
 
-Several underlying repositories contain commercial systems, credentials-sensitive architecture, or active product work and are therefore private. This public repository is a curated, public-safe portfolio of the architecture, design decisions, and systems work I can discuss in detail during a technical interview.
+The active GeminX implementation repositories are private because they contain commercial systems and credentials-sensitive architecture. This public repository is a curated, public-safe technical and commercial showcase. Exact code, production receipts, architecture evidence and private-repository history can be demonstrated during an authorised technical review.
 
 ## Contact
 
 **Robert Wigley**  
-Entreprenuity AI  
+Founder — GeminX / Entreprenuity AI  
+Birmingham, West Midlands, UK  
 Email: entreprenuityai@gmail.com  
 GitHub: https://github.com/R1mob2-svg
