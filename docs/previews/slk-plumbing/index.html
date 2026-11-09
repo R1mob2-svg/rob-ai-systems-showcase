@@ -752,7 +752,7 @@
       }
     }
   </style>
-<meta name="ambush-publication" content="slk-plumbing:915848b73ebb2154de841f91700a8d751aa20912ce16650b0188fd860e006747">
+<meta name="ambush-publication" content="slk-plumbing:bbc0b05a21e92f8c4d1e3e13fa4290114dee49aae5169954d4b6ccae0df78d59">
 </head>
 <body>
 
@@ -811,7 +811,7 @@
         <div class="hero-meta-strip">
           <div class="hero-meta-item">
             <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            <span>Heating &amp; Gas Safe Registered</span>
+            <span>Heating &amp; Central Heating Specialists</span>
           </div>
           <div class="hero-meta-item">
             <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
@@ -900,7 +900,7 @@
             <ul class="service-bullets">
               <li>Rapid leak detection &amp; pipe repair</li>
               <li>Water pressure &amp; valve diagnostics</li>
-              <li>Landlord safety checks &amp; inspections</li>
+              <li>Domestic plumbing checks &amp; inspections</li>
             </ul>
             <a href="tel:01215266811" class="service-link">Call for repairs &rarr;</a>
           </div>
@@ -940,7 +940,7 @@
         <div class="process-card">
           <div class="process-num">04</div>
           <h4>Testing &amp; Handover</h4>
-          <p>Full pressure testing, system demonstration, warranty documentation, and Gas Safe sign-off on completion.</p>
+          <p>Full pressure testing, system demonstration, handover documentation, and customer sign-off on completion.</p>
         </div>
       </div>
     </div>
@@ -1025,12 +1025,42 @@
   <!-- 9. BRIAN LIVE VIEWER BRIDGE (DO NOT REMOVE) -->
   <script id="brian-viewer-bridge-script">
   (function() {
+    var EXPECTED_SECURE_ID = "7b9148d2-5a2e-4861-bf92-690242526811";
+    var EXPECTED_NONCE = "viewer";
+
+    function isTrustedOrigin(origin) {
+      if (!origin || origin === "null") return true;
+      return (
+        origin === "https://www.entreprenuitywebdesign.com" ||
+        origin === "https://entreprenuitywebdesign.com" ||
+        /^https:\/\/[a-z0-9-]+(-[a-z0-9-]+)*\.vercel\.app$/i.test(origin) ||
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin)
+      );
+    }
+
     window.addEventListener('message', function(event) {
+      if (event.source !== window.parent) return;
+      if (!isTrustedOrigin(event.origin)) return;
       if (!event.data || typeof event.data !== 'object') return;
+      if (event.data.type === 'BRIAN_HANDSHAKE' && event.data.nonce) {
+        EXPECTED_NONCE = String(event.data.nonce);
+        return;
+      }
       if (event.data.type === 'BRIAN_APPLY_DOM_UPDATE' && event.data.html) {
+        if (event.data.secureId && String(event.data.secureId).toLowerCase() !== EXPECTED_SECURE_ID) return;
+        if (event.data.nonce && EXPECTED_NONCE !== "viewer" && String(event.data.nonce) !== EXPECTED_NONCE) return;
+        if (event.data.nonce && EXPECTED_NONCE === "viewer") {
+          EXPECTED_NONCE = String(event.data.nonce);
+        }
         try {
           var parser = new DOMParser();
           var newDoc = parser.parseFromString(event.data.html, 'text/html');
+          if (newDoc.head) {
+            var oldStyles = document.head.querySelectorAll('style:not(#brian-outline-style)');
+            oldStyles.forEach(function(s) { s.remove(); });
+            var newStyles = newDoc.head.querySelectorAll('style');
+            newStyles.forEach(function(s) { document.head.appendChild(s.cloneNode(true)); });
+          }
           if (newDoc.body && newDoc.body.innerHTML) {
             document.body.innerHTML = newDoc.body.innerHTML;
             attachClickListeners();
@@ -1064,6 +1094,8 @@
             window.parent.postMessage({
               source: 'brian-viewer-bridge',
               type: 'BRIAN_ELEMENT_SELECTED',
+              secureId: EXPECTED_SECURE_ID,
+              nonce: EXPECTED_NONCE,
               element: {
                 tag: tag,
                 sectionId: sectionId,
@@ -1077,6 +1109,7 @@
     }
 
     var style = document.createElement('style');
+    style.id = 'brian-outline-style';
     style.textContent = '.brian-selected-outline { outline: 2px solid #38bdf8 !important; outline-offset: 4px !important; transition: outline 0.15s ease !important; }';
     document.head.appendChild(style);
 

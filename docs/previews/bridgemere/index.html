@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bridgemere Building Services — Bespoke Home Extensions &amp; Architectural Building</title>
@@ -703,6 +704,7 @@
       }
     }
   </style>
+<meta name="ambush-publication" content="bridgemere:2114c4f7f29eb4dae16515813f0eb999930bb131daa7d0d1f7276fb469cddbd7">
 </head>
 <body>
   <div role="note" style="background:#101c2a;color:#ead1ac;border-bottom:1px solid rgba(213,162,102,.3);padding:9px 16px;text-align:center;font:600 12px/1.5 system-ui,sans-serif">ENTREPRENUITY DESIGN PREVIEW · Illustrative concept, not a live Bridgemere website</div>
@@ -974,12 +976,42 @@
   <!-- 10. BRIAN LIVE VIEWER BRIDGE -->
   <script id="brian-viewer-bridge-script">
   (function() {
+    var EXPECTED_SECURE_ID = "b7e284a1-5912-4d3e-9f4a-81c3e07d52a4";
+    var EXPECTED_NONCE = "viewer";
+
+    function isTrustedOrigin(origin) {
+      if (!origin || origin === "null") return true;
+      return (
+        origin === "https://www.entreprenuitywebdesign.com" ||
+        origin === "https://entreprenuitywebdesign.com" ||
+        /^https:\/\/[a-z0-9-]+(-[a-z0-9-]+)*\.vercel\.app$/i.test(origin) ||
+        /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/i.test(origin)
+      );
+    }
+
     window.addEventListener('message', function(event) {
+      if (event.source !== window.parent) return;
+      if (!isTrustedOrigin(event.origin)) return;
       if (!event.data || typeof event.data !== 'object') return;
+      if (event.data.type === 'BRIAN_HANDSHAKE' && event.data.nonce) {
+        EXPECTED_NONCE = String(event.data.nonce);
+        return;
+      }
       if (event.data.type === 'BRIAN_APPLY_DOM_UPDATE' && event.data.html) {
+        if (event.data.secureId && String(event.data.secureId).toLowerCase() !== EXPECTED_SECURE_ID) return;
+        if (event.data.nonce && EXPECTED_NONCE !== "viewer" && String(event.data.nonce) !== EXPECTED_NONCE) return;
+        if (event.data.nonce && EXPECTED_NONCE === "viewer") {
+          EXPECTED_NONCE = String(event.data.nonce);
+        }
         try {
           var parser = new DOMParser();
           var newDoc = parser.parseFromString(event.data.html, 'text/html');
+          if (newDoc.head) {
+            var oldStyles = document.head.querySelectorAll('style:not(#brian-outline-style)');
+            oldStyles.forEach(function(s) { s.remove(); });
+            var newStyles = newDoc.head.querySelectorAll('style');
+            newStyles.forEach(function(s) { document.head.appendChild(s.cloneNode(true)); });
+          }
           if (newDoc.body && newDoc.body.innerHTML) {
             document.body.innerHTML = newDoc.body.innerHTML;
             attachClickListeners();
@@ -1013,6 +1045,8 @@
             window.parent.postMessage({
               source: 'brian-viewer-bridge',
               type: 'BRIAN_ELEMENT_SELECTED',
+              secureId: EXPECTED_SECURE_ID,
+              nonce: EXPECTED_NONCE,
               element: {
                 tag: tag,
                 sectionId: sectionId,
@@ -1026,6 +1060,7 @@
     }
 
     var style = document.createElement('style');
+    style.id = 'brian-outline-style';
     style.textContent = '.brian-selected-outline { outline: 2px solid #d4af37 !important; outline-offset: 4px !important; transition: outline 0.15s ease !important; }';
     document.head.appendChild(style);
 
@@ -1037,5 +1072,6 @@
   })();
   </script>
 
+<script>document.addEventListener("submit",function(e){e.preventDefault();e.stopImmediatePropagation();alert("Design preview only. No enquiry was sent.");},true);</script>
 </body>
 </html>
