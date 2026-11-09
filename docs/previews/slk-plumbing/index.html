@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S L K Plumbing — Plumbing, Heating &amp; Bathroom Specialists | Darlaston &amp; Wednesbury</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070f1e;
+      --bg-header: #050b17;
+      --bg-surface: #0d1a2d;
+      --accent-primary: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --accent-warm: #f59e0b;
+      --accent-border: rgba(56, 189, 248, 0.35);
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      --text-white: #ffffff;
+      --text-slate: #cbd5e1;
+      --text-muted: #94a3b8;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Space Grotesk', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TOP DISCLOSURE BANNER */
+    .preview-disclosure-bar {
+      background: #0b1526;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+      color: #94a3b8;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 7px 16px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .preview-disclosure-bar span {
+      color: var(--accent-primary);
+    }
+
+    /* 1. HEADER */
+    header {
+      background: var(--bg-header);
+      border-bottom: 1px solid var(--border-subtle);
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: #040d1a;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-tag {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav.nav-links a {
+      color: var(--text-slate);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav.nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-header-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: #040d1a;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
+    }
+
+    .btn-header-phone:hover {
+      background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+      transform: translateY(-1px);
+    }
+
+    /* 2. HERO SECTION: DUAL SCRIM WITH TEXT DIRECTLY OVER PHOTOGRAPHY ACROSS ALL SCREEN SIZES */
+    .hero-section {
+      position: relative;
+      background-color: var(--bg-dark);
+      background-image:
+        linear-gradient(90deg, rgba(7, 15, 30, 0.94) 0%, rgba(7, 15, 30, 0.82) 48%, rgba(7, 15, 30, 0.35) 75%, rgba(7, 15, 30, 0.15) 100%),
+        url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1600&q=85');
+      background-size: cover;
+      background-position: center right;
+      background-repeat: no-repeat;
+      padding: 100px 0 108px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      width: 100%;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .badge-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid var(--accent-border);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 22px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+      color: #ffffff;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
+      color: var(--text-slate);
+      line-height: 1.65;
+      margin-bottom: 34px;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 38px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      color: #040d1a;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 26px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero-meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .hero-meta-item svg {
+      width: 17px;
+      height: 17px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    /* 3. TRUST & LOCAL COVERAGE BAR */
+    .coverage-bar {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 24px 0;
+      width: 100%;
+    }
+
+    .coverage-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .coverage-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-slate);
+      font-weight: 500;
+    }
+
+    .coverage-pill strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* 4. 3 COMPACT SERVICE CARDS WITH DISTINCT PHOTOGRAPHY */
+    .services-section {
+      padding: 92px 0;
+      background-color: var(--bg-dark);
+      width: 100%;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 56px auto;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      line-height: 1.22;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    .section-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-slate);
+      line-height: 1.6;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-border);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      height: 220px;
+      width: 100%;
+      overflow: hidden;
+      background: #091322;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .service-card:hover .service-img-wrapper img {
+      transform: scale(1.04);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(7, 15, 30, 0.85);
+      border: 1px solid var(--border-subtle);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      backdrop-filter: blur(8px);
+    }
+
+    .service-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+
+    .service-body p {
+      font-size: 0.88rem;
+      color: var(--text-slate);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .service-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+    }
+
+    .service-bullets li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .service-bullets li::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .service-link {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s ease;
+    }
+
+    .service-link:hover {
+      gap: 10px;
+      color: #7dd3fc;
+    }
+
+    /* 5. 4-STEP PLAIN BUILD PROCESS (IMAGE-FREE) */
+    .process-section {
+      padding: 92px 0;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      width: 100%;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .process-card {
+      background: var(--bg-dark);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 26px 22px;
+      position: relative;
+    }
+
+    .process-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: rgba(56, 189, 248, 0.4);
+      line-height: 1;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .process-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .process-card p {
+      font-size: 0.85rem;
+      color: var(--text-slate);
+      line-height: 1.55;
+    }
+
+    /* 6. QUIET FAQ SECTION (IMAGE-FREE) */
+    .faq-section {
+      padding: 92px 0;
+      background-color: var(--bg-dark);
+      width: 100%;
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: 40px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-list details {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 18px 22px;
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-list details[open] {
+      border-color: var(--accent-border);
+    }
+
+    .faq-list summary {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+    }
+
+    .faq-list details p {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--text-slate);
+      line-height: 1.6;
+    }
+
+    /* 7. ILLUSTRATIVE CONSULTATION PANEL */
+    .consultation-section {
+      padding: 80px 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      width: 100%;
+    }
+
+    .consultation-box {
+      background: linear-gradient(135deg, #091526 0%, #060e1b 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 16px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .consultation-info h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    .consultation-info p {
+      font-size: 0.95rem;
+      color: var(--text-slate);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .phone-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--accent-border);
+      padding: 12px 20px;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      font-family: var(--font-display);
+      margin-bottom: 12px;
+    }
+
+    .phone-highlight:hover {
+      background: rgba(56, 189, 248, 0.18);
+    }
+
+    .consultation-area-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .consultation-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: rgba(13, 26, 45, 0.8);
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .form-ctrl {
+      background: #060e1a;
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 12px 16px;
+      color: #ffffff;
+      font-size: 0.9rem;
+      outline: none;
+      width: 100%;
+      font-family: var(--font-main);
+    }
+
+    .form-ctrl:focus {
+      border-color: var(--accent-primary);
+    }
+
+    /* 8. FOOTER */
+    footer {
+      background: var(--bg-header);
+      border-top: 1px solid var(--border-subtle);
+      padding: 34px 0;
+      width: 100%;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner a {
+      color: var(--text-slate);
+      text-decoration: none;
+    }
+
+    .footer-inner a:hover {
+      color: var(--accent-primary);
+    }
+
+    /* RESPONSIVE BREAKPOINTS (CRITICAL FOR MOBILE HERO INTEGRITY) */
+    @media (max-width: 960px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .consultation-box {
+        grid-template-columns: 1fr;
+        padding: 32px;
+      }
+      nav.nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 18px;
+      }
+      /* MOBILE HERO: Text strictly preserved over image via full height dual vertical scrim */
+      .hero-section {
+        background-image:
+          linear-gradient(180deg, rgba(7, 15, 30, 0.92) 0%, rgba(7, 15, 30, 0.78) 45%, rgba(7, 15, 30, 0.94) 100%),
+          url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80');
+        background-position: center top;
+        padding: 64px 0 72px 0;
+        min-height: 540px;
+        display: flex;
+        align-items: center;
+      }
+      .hero-content {
+        max-width: 100%;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-primary, .btn-secondary {
+        justify-content: center;
+        width: 100%;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .coverage-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+<meta name="ambush-publication" content="slk-plumbing:915848b73ebb2154de841f91700a8d751aa20912ce16650b0188fd860e006747">
+</head>
+<body>
+
+  <!-- TOP DISCLOSURE BAR -->
+  <div class="preview-disclosure-bar">
+    ENTREPRENUITY DESIGN PREVIEW &bull; <span>PROPOSED CONCEPT FOR S L K PLUMBING</span>
+  </div>
+
+  <!-- 1. HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="#home" class="brand-logo">
+          <div class="brand-mark">SLK</div>
+          <div>
+            <div class="brand-name">S L K Plumbing</div>
+            <span class="brand-tag">Darlaston &amp; Wednesbury</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#process">How We Work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="tel:01215266811" class="btn-header-phone">
+            📞 0121 526 6811
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION: TEXT OVER PHOTOGRAPHIC HERO WITH DUAL SCRIM -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge-eyebrow">
+          <span>Local Heating &amp; Plumbing Specialists</span>
+        </div>
+        <h1 class="hero-title">Reliable plumbing, heating &amp; bathroom installations in Darlaston.</h1>
+        <p class="hero-subtitle">
+          From full high-efficiency boiler installations to bespoke luxury bathrooms and rapid emergency diagnostics. Trusted local workmanship across Wednesbury, Walsall and the West Midlands.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:01215266811" class="btn-primary">
+            Call 0121 526 6811
+          </a>
+          <a href="#services" class="btn-secondary">
+            Explore Services &darr;
+          </a>
+        </div>
+        <div class="hero-meta-strip">
+          <div class="hero-meta-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Heating &amp; Gas Safe Registered</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Darlaston &amp; Wednesbury Coverage</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            <span>Clear Written Quotations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. COVERAGE & PROMISE BAR -->
+  <section class="coverage-bar">
+    <div class="container">
+      <div class="coverage-inner">
+        <div class="coverage-pill">
+          <span>Serving:</span>
+          <strong>Darlaston &bull; Wednesbury &bull; Walsall &bull; Bilston &bull; West Bromwich</strong>
+        </div>
+        <div class="coverage-pill">
+          <span>Direct enquiries:</span>
+          <strong>0121 526 6811</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 3 COMPACT SERVICE CARDS (PHOTOGRAPHIC) -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Core Expertise</span>
+        <h2 class="section-title">Plumbing &amp; Heating Services</h2>
+        <p class="section-subtitle">Delivered with clean workmanship, honest advice, and transparent pricing for local homeowners and landlords.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1: Boiler & Heating -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Boiler installation and heating system engineering">
+            <span class="service-badge">Heating</span>
+          </div>
+          <div class="service-body">
+            <h3>Boiler Installations &amp; Heating</h3>
+            <p>Modern A-rated condensing boiler upgrades, system power flushing, smart thermostat integration, and full central heating radiator installations.</p>
+            <ul class="service-bullets">
+              <li>High-efficiency combi &amp; system boilers</li>
+              <li>Radiator upgrades &amp; thermostatic valves</li>
+              <li>Power flushing &amp; magnetic filter protection</li>
+            </ul>
+            <a href="#contact" class="service-link">Discuss your boiler &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service Card 2: Bathroom Fitting -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Luxury modern bathroom renovation and tiling">
+            <span class="service-badge">Bathrooms</span>
+          </div>
+          <div class="service-body">
+            <h3>Bespoke Bathroom Fitting</h3>
+            <p>Complete bathroom transformations from rip-out to high-end finish: walk-in showers, freestanding baths, precision wall tiling, and concealed pipework.</p>
+            <ul class="service-bullets">
+              <li>Full bathroom refurbishments &amp; en-suites</li>
+              <li>Wetrooms &amp; low-profile shower enclosures</li>
+              <li>Wall and floor tiling, plumbing &amp; lighting</li>
+            </ul>
+            <a href="#contact" class="service-link">Plan your bathroom &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Service Card 3: Emergency Repairs -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80" alt="Professional plumbing repairs, leak detection and maintenance">
+            <span class="service-badge">Repairs</span>
+          </div>
+          <div class="service-body">
+            <h3>Repairs &amp; Emergency Diagnostics</h3>
+            <p>Prompt diagnostic visits for burst pipes, unvented cylinder faults, leaking valves, dripping taps, low pressure problems, and drainage issues.</p>
+            <ul class="service-bullets">
+              <li>Rapid leak detection &amp; pipe repair</li>
+              <li>Water pressure &amp; valve diagnostics</li>
+              <li>Landlord safety checks &amp; inspections</li>
+            </ul>
+            <a href="tel:01215266811" class="service-link">Call for repairs &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 4-STEP PLAIN BUILD PROCESS (IMAGE-FREE) -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Straightforward &amp; Transparent</span>
+        <h2 class="section-title">How We Handle Every Job</h2>
+        <p class="section-subtitle">No hidden fees, no unnecessary add-ons. Clear communication from first phone call to final sign-off.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-num">01</div>
+          <h4>Initial Call &amp; Survey</h4>
+          <p>We discuss your requirements, diagnose the issue, and arrange a punctual site inspection across Darlaston and surrounding towns.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">02</div>
+          <h4>Fixed Written Estimate</h4>
+          <p>You receive an upfront, itemised quote detailing all labour, parts, and timescales before any work begins.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">03</div>
+          <h4>Clean Installation</h4>
+          <p>We protect your carpets and furnishings, carry out clean pipework, and follow all manufacturer and safety standards.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-num">04</div>
+          <h4>Testing &amp; Handover</h4>
+          <p>Full pressure testing, system demonstration, warranty documentation, and Gas Safe sign-off on completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. QUIET FAQ SECTION (IMAGE-FREE) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know about our local plumbing and heating services.</p>
+      </div>
+
+      <div class="faq-list">
+        <details>
+          <summary>Do you cover Darlaston, Wednesbury, and Walsall?</summary>
+          <p>Yes. We operate across Darlaston, Wednesbury, Walsall, Bilston, and surrounding Black Country neighbourhoods for both scheduled installations and urgent repairs.</p>
+        </details>
+        <details>
+          <summary>How quickly can you replace a broken boiler?</summary>
+          <p>In urgent situations or during cold weather, we prioritise boiler replacements and can often survey and install within 24 to 48 hours depending on system requirements.</p>
+        </details>
+        <details>
+          <summary>Do you manage the full bathroom installation including tiling?</summary>
+          <p>Yes. We provide complete turnkey bathroom installations including pipework re-routing, sanitaryware, shower trays, electric showers, wall tiling, and final silicone sealing.</p>
+        </details>
+        <details>
+          <summary>Are your estimates fixed in price?</summary>
+          <p>Yes. We inspect the job beforehand and provide a clear written estimate with no surprise extras or hidden callout charges.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ILLUSTRATIVE CONSULTATION PANEL -->
+  <section class="consultation-section" id="contact">
+    <div class="container">
+      <div class="consultation-box">
+        <div class="consultation-info">
+          <h2>Discuss Your Project</h2>
+          <p>Have an upcoming heating upgrade, bathroom refurbishment, or plumbing query? Speak directly with S L K Plumbing.</p>
+          <a href="tel:01215266811" class="phone-highlight">
+            📞 0121 526 6811
+          </a>
+          <div class="consultation-area-note">
+            Darlaston, Wednesbury &bull; West Midlands
+          </div>
+        </div>
+
+        <form class="consultation-form" onsubmit="event.preventDefault(); alert('Design demonstration only. No enquiry was submitted.');">
+          <input type="text" class="form-ctrl" placeholder="Your Name" required>
+          <input type="tel" class="form-ctrl" placeholder="Phone Number" required>
+          <select class="form-ctrl" required>
+            <option value="">Select Service Needed...</option>
+            <option value="boiler">Boiler Installation / Central Heating</option>
+            <option value="bathroom">Bespoke Bathroom Refurbishment</option>
+            <option value="repair">Plumbing Diagnostics &amp; Repair</option>
+          </select>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 6px;">
+            Preview Enquiry Form
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          &copy; 2026 S L K Plumbing &bull; Darlaston &amp; Wednesbury, West Midlands
+        </div>
+        <div>
+          ENTREPRENUITY DESIGN PREVIEW &bull; Illustrative website concept
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 9. BRIAN LIVE VIEWER BRIDGE (DO NOT REMOVE) -->
+  <script id="brian-viewer-bridge-script">
+  (function() {
+    window.addEventListener('message', function(event) {
+      if (!event.data || typeof event.data !== 'object') return;
+      if (event.data.type === 'BRIAN_APPLY_DOM_UPDATE' && event.data.html) {
+        try {
+          var parser = new DOMParser();
+          var newDoc = parser.parseFromString(event.data.html, 'text/html');
+          if (newDoc.body && newDoc.body.innerHTML) {
+            document.body.innerHTML = newDoc.body.innerHTML;
+            attachClickListeners();
+          }
+        } catch (err) {
+          console.error('[brian-bridge] error applying DOM update:', err);
+        }
+      }
+    });
+
+    function attachClickListeners() {
+      var targets = document.querySelectorAll('section, h1, h2, h3, .hero-content, .service-card, .process-card, details, .consultation-box, footer');
+      targets.forEach(function(el) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          document.querySelectorAll('.brian-selected-outline').forEach(function(s) {
+            s.classList.remove('brian-selected-outline');
+          });
+          el.classList.add('brian-selected-outline');
+
+          var section = el.closest('section') || el;
+          var sectionId = section.id || (section.className ? String(section.className).split(' ')[0] : 'section');
+          var tag = el.tagName.toLowerCase();
+          var heading = el.querySelector('h1, h2, h3');
+          var label = (heading ? heading.innerText.trim() : '') || el.getAttribute('aria-label') || el.innerText.trim().slice(0, 30) || tag;
+
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({
+              source: 'brian-viewer-bridge',
+              type: 'BRIAN_ELEMENT_SELECTED',
+              element: {
+                tag: tag,
+                sectionId: sectionId,
+                label: label.slice(0, 40),
+                currentText: el.innerText.trim().slice(0, 100)
+              }
+            }, '*');
+          }
+        }, true);
+      });
+    }
+
+    var style = document.createElement('style');
+    style.textContent = '.brian-selected-outline { outline: 2px solid #38bdf8 !important; outline-offset: 4px !important; transition: outline 0.15s ease !important; }';
+    document.head.appendChild(style);
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', attachClickListeners);
+    } else {
+      attachClickListeners();
+    }
+  })();
+  </script>
+
+<script>document.addEventListener("submit",function(e){e.preventDefault();e.stopImmediatePropagation();alert("Design preview only. No enquiry was sent.");},true);</script>
+</body>
+</html>
