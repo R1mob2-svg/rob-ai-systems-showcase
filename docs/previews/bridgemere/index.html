@@ -971,7 +971,71 @@
         </div>
       </div>
     </div>
-  </footer>
+  <!-- 10. BRIAN LIVE VIEWER BRIDGE -->
+  <script id="brian-viewer-bridge-script">
+  (function() {
+    window.addEventListener('message', function(event) {
+      if (!event.data || typeof event.data !== 'object') return;
+      if (event.data.type === 'BRIAN_APPLY_DOM_UPDATE' && event.data.html) {
+        try {
+          var parser = new DOMParser();
+          var newDoc = parser.parseFromString(event.data.html, 'text/html');
+          if (newDoc.body && newDoc.body.innerHTML) {
+            document.body.innerHTML = newDoc.body.innerHTML;
+            attachClickListeners();
+          }
+        } catch (err) {
+          console.error('[brian-bridge] error applying DOM update:', err);
+        }
+      }
+    });
+
+    function attachClickListeners() {
+      var targets = document.querySelectorAll('section, h1, h2, h3, .hero-content, .service-card, .process-item, details, .consultation-box, footer');
+      targets.forEach(function(el) {
+        el.style.cursor = 'pointer';
+        el.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          document.querySelectorAll('.brian-selected-outline').forEach(function(s) {
+            s.classList.remove('brian-selected-outline');
+          });
+          el.classList.add('brian-selected-outline');
+
+          var section = el.closest('section') || el;
+          var sectionId = section.id || (section.className ? String(section.className).split(' ')[0] : 'section');
+          var tag = el.tagName.toLowerCase();
+          var heading = el.querySelector('h1, h2, h3');
+          var label = (heading ? heading.innerText.trim() : '') || el.getAttribute('aria-label') || el.innerText.trim().slice(0, 30) || tag;
+
+          if (window.parent && window.parent !== window) {
+            window.parent.postMessage({
+              source: 'brian-viewer-bridge',
+              type: 'BRIAN_ELEMENT_SELECTED',
+              element: {
+                tag: tag,
+                sectionId: sectionId,
+                label: label.slice(0, 40),
+                currentText: el.innerText.trim().slice(0, 100)
+              }
+            }, '*');
+          }
+        }, true);
+      });
+    }
+
+    var style = document.createElement('style');
+    style.textContent = '.brian-selected-outline { outline: 2px solid #d4af37 !important; outline-offset: 4px !important; transition: outline 0.15s ease !important; }';
+    document.head.appendChild(style);
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', attachClickListeners);
+    } else {
+      attachClickListeners();
+    }
+  })();
+  </script>
 
 </body>
 </html>
