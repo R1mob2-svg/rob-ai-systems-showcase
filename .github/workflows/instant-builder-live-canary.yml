@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/instant-builder-live-canary.yml'
+      - 'scripts/instant-builder-live-canary.mjs'
   workflow_dispatch:
 permissions:
   contents: write
