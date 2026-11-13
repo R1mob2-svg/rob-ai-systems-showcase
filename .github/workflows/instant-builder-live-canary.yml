@@ -1,4 +1,5 @@
 name: Instant Builder Live Canary
+# credentialless origin canary; wildcard CORS is valid without cookies
 on:
   push:
     paths:
