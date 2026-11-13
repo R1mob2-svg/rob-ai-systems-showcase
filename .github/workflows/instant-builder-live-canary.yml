@@ -1,0 +1,36 @@
+name: Instant Builder Live Canary
+on:
+  push:
+    paths:
+      - '.github/workflows/instant-builder-live-canary.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: instant-builder-live-canary
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Real public-origin Brian build, edit and screenshot receipt
+        id: canary
+        continue-on-error: true
+        run: node scripts/instant-builder-live-canary.mjs
+      - name: Persist redacted public canary receipt
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/previews/live-builder/live-canary.json
+          git diff --cached --quiet || git commit -m "test(preview): record live Brian agent QA canary receipt"
+          git push
+      - name: Fail if actual build and edit were not visually verified
+        if: always()
+        run: |
+          node -e 'const r=require("./docs/previews/live-builder/live-canary.json"); if(r.overall!=="PASS"){ console.error(r.error||"Brian canary not completed"); process.exit(1) }'
