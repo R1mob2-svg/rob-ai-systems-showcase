@@ -47,7 +47,7 @@ try{
       "Access-Control-Request-Headers":"content-type"},signal:AbortSignal.timeout(12000)
   });
   receipt.checks.preflight={status:pre.status,
-    allow_origin:pre.headers.get("access-control-allow-origin")===ORIGIN,
+    allow_origin:[ORIGIN,"*"].includes(pre.headers.get("access-control-allow-origin")),
     response_headers:Object.fromEntries([...pre.headers.entries()].filter(([k])=>/access-control|vary|server|x-geminx/i.test(k)))};
   if(pre.status!==204||!receipt.checks.preflight.allow_origin)throw Error("Public-origin CORS preflight failed");
   receipt.phases.push("CORS_VALIDATED");
