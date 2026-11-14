@@ -1,0 +1,51 @@
+{
+  "source_dir": "/home/node/.openclaw/workspace-brian/taurus-build/opt",
+  "attribution_required": "CC BY-SA 4.0 - attribution in page footer",
+  "images": [
+    {
+      "file": "hero-movers.jpg",
+      "local_file": "assets/hero-movers.jpg",
+      "commons_title": "File:Umzugsfirma - Möbelpacker an der Arbeit.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Umzugsfirma_-_M%C3%B6belpacker_an_der_Arbeit.jpg",
+      "license": "CC BY-SA 4.0",
+      "used_on_page": true,
+      "use": "hero background (subject right, scrim left) + same-hire band image"
+    },
+    {
+      "file": "packing-new-home.jpg",
+      "local_file": "assets/packing-new-home.jpg",
+      "commons_title": "File:Umzug in ein neues Zuhause.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Umzug_in_ein_neues_Zuhause.jpg",
+      "license": "CC BY-SA 4.0",
+      "used_on_page": true,
+      "use": "service card 3 - packed boxes and fragiles"
+    },
+    {
+      "file": "packed-room.jpg",
+      "local_file": "assets/packed-room.jpg",
+      "commons_title": "Category:Umzug (downloaded to img-src/, title not captured in extmetadata dump)",
+      "source": "https://commons.wikimedia.org/wiki/Category:Umzug",
+      "license": "CC BY-SA 4.0",
+      "used_on_page": true,
+      "use": "service card 1 (house moves) and band image"
+    },
+    {
+      "file": "moving-boxes.jpg",
+      "local_file": "assets/moving-boxes.jpg",
+      "commons_title": "Category:Umzug (downloaded to img-src/, title not captured in extmetadata dump)",
+      "source": "https://commons.wikimedia.org/wiki/Category:Umzug",
+      "license": "CC BY-SA 4.0",
+      "used_on_page": true,
+      "use": "service card 2 (packing support)"
+    },
+    {
+      "file": "marco.jpg",
+      "commons_title": "File:Marco Good Umzüge.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Marco_Good_Umz%C3%BCge.jpg",
+      "license": "CC BY-SA 4.0",
+      "used_on_page": false,
+      "rejected_reason": "photo contains third-party company livery/name (Good Umzüge) - unsafe for a competitor-branded preview"
+    }
+  ],
+  "attribution_note": "Page footer credits Kantonal Umzüge (hero + packing) and Wikimedia Commons Category:Umzug (remaining). Images are representative moving imagery, not Taurus Removals staff or vehicles."
+}
