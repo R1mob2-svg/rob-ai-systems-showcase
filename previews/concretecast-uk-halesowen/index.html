@@ -211,9 +211,9 @@
       background-color: var(--bg-dark);
       background-image: 
         linear-gradient(90deg, rgba(8, 13, 22, 0.95) 0%, rgba(8, 13, 22, 0.85) 45%, rgba(8, 13, 22, 0.45) 75%, rgba(8, 13, 22, 0.20) 100%),
-        url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=80');
+        url('https://images.unsplash.com/photo-1742112125664-6ee6c87fbe79?auto=format&fit=crop&w=1920&q=85');
       background-size: cover;
-      background-position: right center;
+      background-position: 68% center;
       padding: 90px 0 100px 0;
       border-bottom: 1px solid var(--border-subtle);
     }
@@ -1047,6 +1047,24 @@
       }
     }
     @media (max-width: 768px) {
+      /* P0: on narrow phones display the ACTUAL precast products clearly, without a destructive cover crop. */
+      .hero-section {
+        background-image: none;
+        padding: 20px 0 54px;
+      }
+      .hero-section::before {
+        content: "";
+        display: block;
+        width: calc(100% - 32px);
+        height: clamp(220px, 62vw, 300px);
+        max-width: 1200px;
+        margin: 0 auto 28px;
+        border: 1px solid rgba(201, 130, 47, 0.25);
+        border-radius: 16px;
+        background: #111b23 url('https://images.unsplash.com/photo-1742112125664-6ee6c87fbe79?auto=format&fit=crop&w=1920&q=85') 66% center / cover no-repeat;
+        box-shadow: 0 18px 45px rgba(0,0,0,0.3);
+      }
+      .hero-content { max-width: 100%; }
       .top-bar-inner {
         justify-content: center;
         text-align: center;
@@ -1144,7 +1162,7 @@
   </header>
 
   <!-- 2. HERO SECTION -->
-  <section class="hero-section" id="home">
+  <section class="hero-section" id="home" data-hero-subject="Workers inspecting stacked precast concrete panels and slabs at a concrete production yard" data-hero-image-license="Unsplash License" data-hero-image-attribution="Ronnakorn Triraganon / Unsplash">
     <div class="container">
       <div class="hero-content">
         <div class="hero-pill">
@@ -1647,6 +1665,7 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 ConcreteCast UK Ltd. All rights reserved. Registered in England &amp; Wales.</p>
+        <p class="hero-photo-credit" style="color:#8f9dad;font-size:11px;margin:0 0 8px;">Hero: illustrative precast concrete manufacturing photograph by <a href="https://unsplash.com/photos/construction-workers-inspect-precast-concrete-slabs-outdoors-v4k1Y3Y-Vps" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;">Ronnakorn Triraganon / Unsplash</a>. Not ConcreteCast staff or premises.</p>
         <p>Digital Ambush Client Concept Preview &bull; Prepared by <a href="https://entreprenuitywebdesign.com" target="_blank" rel="noopener">Entreprenuity AI</a></p>
       </div>
     </div>
