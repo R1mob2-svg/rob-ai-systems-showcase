@@ -1,0 +1,53 @@
+{
+  "schema": "brian.verified-visual-qa.v1",
+  "slug": "taurus-removals-birmingham",
+  "project_id": "f54832ad-5580-41ff-b84b-abb9f8d07de3",
+  "founder_job": "founder-job-hq-brian-selfserve-build-f54832ad-5580-41ff-b84b-abb9f8d07de3",
+  "operation": "build-resumed-after-four-dead-runs",
+  "index_html_sha256": "bd9dcd03f0e793fad1fff7276531951a8aa375bd81d733f73a120ca559519c4c",
+  "pass": true,
+  "vision_inspected": true,
+  "vision_model": "gemini-2.5-flash (configured image model) - two vision rounds, round 1 rejected duplicate hero/card imagery, round 2 passed",
+  "browser_checks": {
+    "engine": "Playwright headless Chromium chromium-1148",
+    "viewports": [
+      { "width": 390, "scrollWidth": 390, "clientWidth": 390, "horizontal_overflow_px": 0 },
+      { "width": 820, "scrollWidth": 820, "clientWidth": 820, "horizontal_overflow_px": 0 },
+      { "width": 1280, "scrollWidth": 1280, "clientWidth": 1280, "horizontal_overflow_px": 0 }
+    ],
+    "images_decoded": 5,
+    "all_images_natural_width_gt_900": true,
+    "console_errors": 0,
+    "mobile_nav_hidden_below_900px": true,
+    "brand_single_line": true,
+    "hero_subject_right_copy_left": true,
+    "process_and_faq_plain_dark_background": true
+  },
+  "screenshots": [
+    { "file": "qa/taurus-mobile-390px.png", "device": "mobile", "width": 390, "pass": true, "vision_inspected": true, "sha256": "09ff2a3a18308c08221a39468636c9d82bb1c291cbf5d2d86b5e318bccb2f9dd" },
+    { "file": "qa/taurus-tablet-820px.png", "device": "tablet", "width": 820, "pass": true, "vision_inspected": true, "sha256": "1bed142fb9dbfadb48e083181928762b8cfcb2b039a0162c3e2761fb6cadb170" },
+    { "file": "qa/taurus-desktop-1280px.png", "device": "desktop", "width": 1280, "pass": true, "vision_inspected": true, "sha256": "32f9fab57a9c47c8f7d2ac8a1a2eed359ed2ada59ab1ea40667ba26308bccf2d" }
+  ],
+  "evidence_classification": {
+    "verified_business_facts": [
+      "Business name 'Taurus Removals' from the visitor/owner brief",
+      "Town 'Birmingham' from the brief",
+      "'House removals' as the trade from the owner description",
+      "TAURUS REMOVALS LTD is a UK registered company (Companies House 10668690) - city and trade are consistent with a removals business"
+    ],
+    "supplied_but_unverified": [
+      "Service scope wording (packing support, fragile handling, whole-home moves) is presented as how a standard removal is scoped and as questions to confirm - not as a claim of completed jobs"
+    ],
+    "excluded_deliberately": [
+      "phone number", "street address", "opening hours", "review scores or counts",
+      "insurance/licensing badges", "years of experience", "crew names", "fleet claims",
+      "any review sentiment in either direction"
+    ],
+    "imagery": "Wikimedia Commons, CC BY-SA 4.0, credited in the footer. Representative moving imagery, not Taurus Removals staff or vehicles. A candidate image with third-party livery (Good Umzüge) was rejected during QA and is not in the build."
+  },
+  "notes": [
+    "Enquiry CTA opens the visitor's own mail client with a blank recipient; no customer contact details are embedded.",
+    "Page is marked noindex,nofollow for preview purposes.",
+    "Source branch brian-preview/selfserve-96dd3433-4013-4f9a-88d2-21ae234f091b was never created by any of the dead runs; this artifact is published to the existing GitHub Pages showcase instead of fabricating that branch."
+  ]
+}
