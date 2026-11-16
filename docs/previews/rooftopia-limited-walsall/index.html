@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooftopia Limited — Walsall &amp; West Midlands Roofing Specialists</title>
+  <meta name="description" content="Rooftopia Limited delivers master pitched roof replacements, slate and tile repairs, flat roofing systems, and chimney leadwork across Walsall, Bloxwich, and the West Midlands.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Cpath d='M20 70 L50 25 L80 70 Z' fill='%23f59e0b'/%3E%3C/svg%3E" type="image/svg+xml">
+  <style>
+    :root {
+      --primary: #0b1329;
+      --secondary: #1e293b;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --bg-light: #f8fafc;
+      --bg-white: #ffffff;
+      --border: #e2e8f0;
+      --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); color: var(--text-main); background: var(--bg-light); line-height: 1.6; }
+
+    header {
+      background: rgba(11, 19, 41, 0.95);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 1.75rem; align-items: center; }
+    .nav-links a { color: #cbd5e1; text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-actions { display: flex; gap: 1rem; align-items: center; }
+    .phone-link { color: #fff; font-weight: 700; text-decoration: none; font-size: 0.95rem; display: flex; align-items: center; gap: 0.4rem; }
+    .phone-link:hover { color: var(--accent); }
+    .cta-button {
+      background: var(--accent);
+      color: #0b1329;
+      font-weight: 700;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .cta-button:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+    .hero {
+      position: relative;
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+      background-color: #070c14;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url('assets/hero-roofers.jpg');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, rgba(7, 12, 20, 0.98) 0%, rgba(7, 12, 20, 0.92) 42%, rgba(7, 12, 20, 0.55) 75%, rgba(7, 12, 20, 0.25) 100%);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: var(--accent);
+      padding: 0.35rem 0.85rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.15;
+      max-width: 700px;
+      margin-bottom: 1.25rem;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.18rem;
+      color: #e2e8f0;
+      max-width: 620px;
+      margin-bottom: 2.25rem;
+      line-height: 1.65;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-primary {
+      background: var(--accent);
+      color: #0b1329;
+      font-weight: 800;
+      padding: 0.95rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+    }
+    .hero-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .hero-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-weight: 700;
+      padding: 0.95rem 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      backdrop-filter: blur(4px);
+      transition: background 0.2s;
+    }
+    .hero-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+
+    .trust-ribbon {
+      background: #0f172a;
+      color: #cbd5e1;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.25rem 1.5rem;
+    }
+    .trust-ribbon-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .trust-item strong { display: block; color: #fff; font-size: 1.1rem; margin-bottom: 0.2rem; }
+    .trust-item span { font-size: 0.85rem; color: #94a3b8; }
+
+    .section { max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem; }
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 3.5rem; }
+    .section-head h2 { font-size: 2.35rem; font-weight: 900; color: var(--primary); margin-bottom: 0.85rem; letter-spacing: -0.5px; }
+    .section-head p { color: var(--text-muted); font-size: 1.08rem; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+    .service-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2.25rem;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 28px -6px rgba(0,0,0,0.08);
+      border-color: #cbd5e1;
+    }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+    .service-card h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 0.85rem; color: var(--primary); }
+    .service-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; }
+
+    .process-section { background: #ffffff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 5rem 1.5rem; }
+    .process-container { max-width: 1200px; margin: 0 auto; }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.75rem; margin-top: 3rem; }
+    .process-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem;
+      position: relative;
+    }
+    .process-step {
+      font-size: 0.85rem;
+      font-weight: 900;
+      color: var(--accent-hover);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+    .process-card h4 { font-size: 1.15rem; font-weight: 800; color: var(--primary); margin-bottom: 0.6rem; }
+    .process-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.55; }
+
+    .coverage-section {
+      background: #0b1329;
+      color: #fff;
+      padding: 5rem 1.5rem;
+    }
+    .coverage-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .coverage-info h2 { font-size: 2.25rem; font-weight: 900; margin-bottom: 1rem; color: #fff; }
+    .coverage-info p { color: #94a3b8; font-size: 1.08rem; margin-bottom: 2rem; line-height: 1.65; }
+    .coverage-tags { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; }
+    .coverage-tag {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    .contact-card {
+      background: #ffffff;
+      color: var(--text-main);
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .contact-card h3 { font-size: 1.45rem; font-weight: 800; color: var(--primary); margin-bottom: 1.25rem; }
+    .contact-card p { margin-bottom: 0.85rem; font-size: 0.98rem; color: #475569; }
+    .contact-card strong { color: var(--primary); }
+    .contact-card a { color: var(--accent-hover); text-decoration: none; font-weight: 700; }
+    .contact-btn {
+      display: block;
+      text-align: center;
+      background: var(--primary);
+      color: #fff !important;
+      padding: 0.85rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover { background: #1e293b; }
+
+    .faq-section { max-width: 860px; margin: 0 auto; padding: 5rem 1.5rem; }
+    .faq-item {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+    }
+    .faq-item h3 { font-size: 1.15rem; font-weight: 800; color: var(--primary); margin-bottom: 0.6rem; }
+    .faq-item p { color: var(--text-muted); font-size: 0.96rem; line-height: 1.6; }
+
+    footer {
+      background: #070c14;
+      color: #64748b;
+      padding: 3.5rem 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-inner p { margin-bottom: 0.5rem; }
+    .footer-credit { font-size: 0.8rem; color: #475569; margin-top: 1rem; }
+
+    @media (max-width: 900px) {
+      .trust-ribbon-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .coverage-container { grid-template-columns: 1fr; gap: 2.5rem; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 600px) {
+      .trust-ribbon-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 75vh; }
+      .hero-content { padding: 3.5rem 1.25rem; }
+      .hero-overlay { background: linear-gradient(180deg, rgba(7, 12, 20, 0.98) 0%, rgba(7, 12, 20, 0.92) 55%, rgba(7, 12, 20, 0.7) 100%); }
+      .phone-link { display: none; }
+      .cta-button { padding: 0.5rem 0.85rem; font-size: 0.82rem; }
+      .brand { font-size: 1.15rem; }
+      .nav-container { padding: 0.85rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">ROOFTOPIA <span>LIMITED</span></a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">How We Work</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+447310638510" class="phone-link">07310 638510</a>
+        <a href="mailto:Rooftopia0@gmail.com" class="cta-button">Request Inspection</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" data-hero-subject="walsall-roofing-contractors">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Active UK Registered Roofing Contractor</span>
+        <h1>Walsall's Trusted Roofing Specialists — Handled Properly.</h1>
+        <p>From full pitched roof replacements and slate repairs to watertight EPDM flat roofing and chimney leadwork, Rooftopia Limited delivers guaranteed craftsmanship across Walsall and the West Midlands.</p>
+        <div class="hero-btns">
+          <a href="tel:+447310638510" class="hero-primary">Call 07310 638510</a>
+          <a href="mailto:Rooftopia0@gmail.com" class="hero-secondary">Email Rooftopia0@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-ribbon">
+      <div class="trust-ribbon-grid">
+        <div class="trust-item">
+          <strong>Active UK Company</strong>
+          <span>Companies House Reg: 15580912</span>
+        </div>
+        <div class="trust-item">
+          <strong>Walsall Based</strong>
+          <span>56 Cartbridge Lane, WS4 1SB</span>
+        </div>
+        <div class="trust-item">
+          <strong>Guaranteed Work</strong>
+          <span>Full Material &amp; Workmanship Backing</span>
+        </div>
+        <div class="trust-item">
+          <strong>Rapid Response</strong>
+          <span>Free Site Surveys &amp; Itemised Estimates</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-head">
+        <h2>Complete Roofing Solutions Across Walsall</h2>
+        <p>Whether you require emergency storm repair, traditional tile restoration, or a brand-new roof structure, our experienced team provides precision and durability.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Pitched Roof Replacements</h3>
+          <p>Complete strip, re-felt, re-batten, and tiling with high-grade clay, concrete, or Welsh slate tailored to protect your home for decades.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Slate &amp; Tile Repairs</h3>
+          <p>Prompt replacement of slipped, cracked, or missing slates, ridge tile re-bedding, and mortar verge pointing to eliminate damp penetration.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">03</div>
+          <h3>EPDM &amp; GRP Flat Roofing</h3>
+          <p>Modern seamless flat roofing systems for extensions, garages, and dormers. High UV resistance with zero standing water vulnerabilities.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">04</div>
+          <h3>Chimney Repair &amp; Leadwork</h3>
+          <p>Complete chimney stack repointing, lead flashing renewal, step flashings, and chimney removal to prevent persistent ceiling leaks.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">05</div>
+          <h3>Fascias, Soffits &amp; Guttering</h3>
+          <p>Low-maintenance uPVC roofline installations, deep-flow rainwater guttering, and dry verge systems protecting your home's structural eaves.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">06</div>
+          <h3>Emergency Roof Inspections</h3>
+          <p>Immediate assessment for storm damage, high wind displacement, and active internal leaks across Walsall and neighbouring boroughs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process-section">
+      <div class="process-container">
+        <div class="section-head" style="margin-bottom: 2rem;">
+          <h2>Our 4-Step Roofing Process</h2>
+          <p>Transparent communication, fixed pricing, and reliable execution from first inspection to clean completion.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-step">Step 01</div>
+            <h4>Detailed Site Survey</h4>
+            <p>We inspect roof pitch, timbers, battens, underlay, and chimney condition to determine the exact requirements.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">Step 02</div>
+            <h4>Itemised Quotation</h4>
+            <p>You receive a clear, honest written quote specifying materials, scope of work, and timelines with no hidden extras.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">Step 03</div>
+            <h4>Master Craftsmanship</h4>
+            <p>Our skilled roofers carry out all work adhering strictly to British Standards (BS 5534) and safety regulations.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">Step 04</div>
+            <h4>Final Handover</h4>
+            <p>Full property clean-up, thorough debris clearance, magnetic nail sweeps, and complete guarantee documentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="coverage" class="coverage-section">
+      <div class="coverage-container">
+        <div class="coverage-info">
+          <h2>Walsall &amp; West Midlands Service Coverage</h2>
+          <p>Located on Cartbridge Lane in Walsall (WS4 1SB), Rooftopia Limited provides residential and commercial roofing services across the Black Country and surrounding regions:</p>
+          <div class="coverage-tags">
+            <span class="coverage-tag">Walsall</span>
+            <span class="coverage-tag">Rushall</span>
+            <span class="coverage-tag">Aldridge</span>
+            <span class="coverage-tag">Bloxwich</span>
+            <span class="coverage-tag">Willenhall</span>
+            <span class="coverage-tag">Wednesbury</span>
+            <span class="coverage-tag">Brownhills</span>
+            <span class="coverage-tag">Sutton Coldfield</span>
+            <span class="coverage-tag">Great Barr</span>
+            <span class="coverage-tag">Cannock</span>
+          </div>
+          <p style="font-size: 0.95rem; color: #94a3b8;">Need an urgent roof repair outside these areas? Contact us directly to confirm availability.</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Contact Rooftopia Limited</h3>
+          <p><strong>Registered Address:</strong><br>56 Cartbridge Lane, Walsall, WS4 1SB</p>
+          <p><strong>Direct Telephone:</strong><br><a href="tel:+447310638510">07310 638510</a></p>
+          <p><strong>Official Email:</strong><br><a href="mailto:Rooftopia0@gmail.com">Rooftopia0@gmail.com</a></p>
+          <p><strong>Company Registration:</strong><br>15580912 (England &amp; Wales)</p>
+          <a href="tel:+447310638510" class="contact-btn">Call For Immediate Assistance</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="section-head">
+        <h2>Frequently Asked Questions</h2>
+        <p>Common questions from homeowners considering roofing repairs or replacements.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I know if my roof needs a full replacement or just a repair?</h3>
+        <p>If leaks are isolated to a broken tile, slipped flashing, or cracked mortar, a localized repair is often sufficient. However, if the felt underlay has rotted, battens are perishing, or tiles are porous and widespread leaks occur, a full reroofing provides long-term cost savings and structural security.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you provide free roof inspections and quotes?</h3>
+        <p>Yes. Rooftopia Limited provides obligation-free on-site roof evaluations and transparent written estimates across Walsall and the West Midlands.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long does a standard pitched roof replacement take?</h3>
+        <p>A standard 3-bedroom semi-detached house reroof typically takes between 3 to 5 working days, weather permitting. We keep your property fully watertight and protected throughout every stage of the project.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Are your roofing works guaranteed?</h3>
+        <p>Every major reroofing and flat roofing installation carries comprehensive workmanship and manufacturer material warranties for complete peace of mind.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 Rooftopia Limited (Company No. 15580912). Registered in England &amp; Wales.</p>
+      <p>56 Cartbridge Lane, Walsall, West Midlands, WS4 1SB | Phone: 07310 638510 | Email: Rooftopia0@gmail.com</p>
+      <p class="footer-credit">Crafted for Rooftopia Limited • Photo asset: Unsplash (Immo Wegmann)</p>
+    </div>
+  </footer>
+</body>
+</html>
